@@ -1,0 +1,13 @@
+name: ipify-api
+version: 0.1.0
+
+authors:
+  - Chris Castle <castle@heroku.com>
+
+targets:
+  ipify-api:
+    main: src/ipify-api.cr
+
+crystal: 0.24.1
+
+license: MIT
