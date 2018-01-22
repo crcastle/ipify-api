@@ -41,4 +41,4 @@ Transfer/sec:      4.37MB
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/crcastle) Chris Castle - creator, maintainer
+- [[crcastle]](https://github.com/crcastle) Chris Castle - creator, maintainer
