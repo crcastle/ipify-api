@@ -6,17 +6,12 @@ I wanted to see how fast Crystal was compared to the [benchmarks Randall reporte
 
 If someone wants to teach me how to investigate and improve the performance of my Crystal code, [let me know](https://twitter.com/crc)!
 
-```txt
-$ wrk -t2 -c500 -d10 https://ipify-api-crystal.herokuapp.com/
-Running 10s test @ https://ipify-api-crystal.herokuapp.com/
-  2 threads and 500 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   147.00ms   90.76ms   1.16s    97.11%
-    Req/Sec     1.78k   391.37     2.49k    77.89%
-  33931 requests in 10.07s, 5.50MB read
-Requests/sec:   3370.56
-Transfer/sec:    559.57KB
-```
+<div style="text-align: center">
+<img src="docs/ipify-api-crystal-load-test.gif" width="70%" alt="ipify API load test in Crystal">
+</div>
+
+*Note: `Requests/sec` above doesn't match what's shown below because recording the GIF at the same time as doing the load test impacts the results!*
+
 
 ```txt
 wrk -t2 -c500 -d10 http://localhost:8080
@@ -29,6 +24,18 @@ Running 10s test @ http://localhost:8080
   Socket errors: connect 0, read 50, write 0, timeout 0
 Requests/sec:  40217.31
 Transfer/sec:      4.37MB
+```
+
+```txt
+$ wrk -t2 -c500 -d10 https://ipify-api-crystal.herokuapp.com/
+Running 10s test @ https://ipify-api-crystal.herokuapp.com/
+  2 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   147.00ms   90.76ms   1.16s    97.11%
+    Req/Sec     1.78k   391.37     2.49k    77.89%
+  33931 requests in 10.07s, 5.50MB read
+Requests/sec:   3370.56
+Transfer/sec:    559.57KB
 ```
 
 ## Contributing
